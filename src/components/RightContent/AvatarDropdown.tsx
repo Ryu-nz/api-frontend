@@ -17,6 +17,7 @@ export type GlobalHeaderRightProps = {
 
 const Name = () => {
   const { initialState } = useModel('@@initialState');
+  // @ts-ignore
   const { currentUser } = initialState || {};
 
   const nameClassName = useEmotionCss(({ token }) => {
@@ -38,6 +39,7 @@ const Name = () => {
 
 const AvatarLogo = () => {
   const { initialState } = useModel('@@initialState');
+  // @ts-ignore
   const { currentUser } = initialState || {};
 
   const avatarClassName = useEmotionCss(({ token }) => {
@@ -123,6 +125,7 @@ const AvatarDropdown: React.FC<GlobalHeaderRightProps> = ({ menu }) => {
     return loading;
   }
 
+  // @ts-ignore
   const { currentUser } = initialState;
 
   if (!currentUser || !currentUser.name) {

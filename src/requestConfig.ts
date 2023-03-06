@@ -20,12 +20,11 @@ interface ResponseStructure {
 }
 
 /**
- * @name 错误处理
- * pro 自带的错误处理， 可以在这里做自己的改动
+ * @name 请求处理
  * @doc https://umijs.org/docs/max/request#配置
  */
 export const requestConfig: RequestConfig = {
-  baseURL: 'http://localhost:8090',
+  baseURL: API_URL,
   withCredentials: true,
 
   // 请求拦截器

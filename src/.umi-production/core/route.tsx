@@ -16,7 +16,7 @@ export async function getRoutes() {
 '7': React.lazy(() => import(/* webpackChunkName: "p__Admin__InterfaceInfo__index" */'@/pages/Admin/InterfaceInfo/index.tsx')),
 '8': React.lazy(() => import(/* webpackChunkName: "p__Admin__InterfaceAnalysis__index" */'@/pages/Admin/InterfaceAnalysis/index.tsx')),
 '9': React.lazy(() => import(/* webpackChunkName: "p__404" */'@/pages/404.tsx')),
-'ant-design-pro-layout': React.lazy(() => import(/* webpackChunkName: "umi__plugin-layout__Layout" */'F:/Project/项目/api/api-frontend/src/.umi/plugin-layout/Layout.tsx')),
+'ant-design-pro-layout': React.lazy(() => import(/* webpackChunkName: "t__plugin-layout__Layout" */'F:/Project/项目/api/api-frontend/src/.umi-production/plugin-layout/Layout.tsx')),
 },
   };
 }
