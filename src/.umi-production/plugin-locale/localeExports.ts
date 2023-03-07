@@ -93,7 +93,7 @@ export const addLocale = (
  * @returns IntlShape
  */
 export const getIntl = (locale?: string, changeIntl?: boolean) => {
-  // 如果全局的 g_intl 存在，且不是 setIntl check
+  // 如果全局的 g_intl 存在，且不是 setIntl 调用
   if (g_intl && !changeIntl && !locale) {
     return g_intl;
   }

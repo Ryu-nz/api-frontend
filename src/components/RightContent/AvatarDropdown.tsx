@@ -16,7 +16,7 @@ export type GlobalHeaderRightProps = {
 };
 
 const Name = () => {
-  const { initialState } = useModel('@@initialState');
+  const { initialState, setInitialState } = useModel('@@initialState');
   // @ts-ignore
   const { currentUser } = initialState || {};
 
@@ -62,7 +62,7 @@ const AvatarDropdown: React.FC<GlobalHeaderRightProps> = ({ menu }) => {
    * 退出登录，并且将当前的 url 保存
    */
   const loginOut = async () => {
-    await outLogin();
+    await userLogoutUsingPOST();
     const { search, pathname } = window.location;
     const urlParams = new URL(window.location.href).searchParams;
     /** 此方法会跳转到 redirect 参数所在的位置 */
@@ -101,7 +101,7 @@ const AvatarDropdown: React.FC<GlobalHeaderRightProps> = ({ menu }) => {
         flushSync(() => {
           setInitialState((s) => ({ ...s, currentUser: undefined }));
         });
-        userLogoutUsingPOST();
+        loginOut();
         return;
       }
       history.push(`/account/${key}`);

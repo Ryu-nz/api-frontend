@@ -7,6 +7,6 @@ import { defineConfig } from 'umi';
  */
 export default defineConfig({
   define: {
-    API_URL: 'http://121.89.123.78:8090', // API地址
+    API_URL: 'http://121.89.193.78:8090', // API地址
   },
 });

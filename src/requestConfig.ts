@@ -26,7 +26,6 @@ interface ResponseStructure {
 export const requestConfig: RequestConfig = {
   baseURL: API_URL,
   withCredentials: true,
-
   // 请求拦截器
   requestInterceptors: [
     (config: RequestOptions) => {

@@ -28,4 +28,6 @@ interface InitialState {
    * 用户登录态
    */
   loginUser?: API.UserVO;
+  fetchUserInfo?: () => Promise<API.UserVO | undefined>;
+
 }
