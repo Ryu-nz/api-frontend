@@ -32,7 +32,7 @@ const GlobalHeaderRight: React.FC = () => {
 
   const { initialState } = useModel('@@initialState');
 
-  if (!initialState) {
+  if (!initialState || !initialState?.settings) {
     return null;
   }
 

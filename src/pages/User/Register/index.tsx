@@ -1,7 +1,7 @@
 import Footer from '@/components/Footer';
-import {userRegisterUsingPOST} from '@/services/api-backend/userController';
+import { userRegisterUsingPOST } from '@/services/api-backend/userController';
 import { LockOutlined, UserOutlined } from '@ant-design/icons';
-import {LoginForm, ProFormCheckbox, ProFormText} from '@ant-design/pro-components';
+import { LoginForm, ProFormCheckbox, ProFormText } from '@ant-design/pro-components';
 import { useEmotionCss } from '@ant-design/use-emotion-css';
 import { FormattedMessage, Helmet, history, SelectLang, useIntl } from '@umijs/max';
 import { Alert, message, Tabs } from 'antd';
@@ -65,10 +65,10 @@ const Register: React.FC = () => {
   const intl = useIntl();
   const handleSubmit = async (values: API.UserRegisterRequest) => {
     // 校验
-    const {userAccount, userPassword, checkPassword} = values;
+    const { userAccount, userPassword, checkPassword } = values;
     // @ts-ignore
-    if(userAccount.length < 4) {
-      message.error("注册账号长度过短");
+    if (userAccount.length < 4) {
+      message.error('注册账号长度过短');
       return;
     }
     if (userPassword !== checkPassword) {
@@ -77,7 +77,7 @@ const Register: React.FC = () => {
     }
     try {
       // 注册
-      const res = await userRegisterUsingPOST({...values});
+      const res = await userRegisterUsingPOST({ ...values });
       if (res.data) {
         const defaultLoginSuccessMessage = intl.formatMessage({
           id: 'pages.register.success',
@@ -118,6 +118,11 @@ const Register: React.FC = () => {
         }}
       >
         <LoginForm
+          submitter={{
+            searchConfig: {
+              submitText: '注册',
+            },
+          }}
           contentStyle={{
             minWidth: 280,
             maxWidth: '75vw',
@@ -224,7 +229,6 @@ const Register: React.FC = () => {
               />
             </>
           )}
-
 
           <div
             style={{

@@ -3,5 +3,4 @@
 // DO NOT CHANGE IT MANUALLY!
 import SmileOutlined from 'F:/Project/项目/api/api-frontend/node_modules/@ant-design/icons/es/icons/SmileOutlined';
 import CrownOutlined from 'F:/Project/项目/api/api-frontend/node_modules/@ant-design/icons/es/icons/CrownOutlined';
-import TableOutlined from 'F:/Project/项目/api/api-frontend/node_modules/@ant-design/icons/es/icons/TableOutlined';
-export default { SmileOutlined, CrownOutlined, TableOutlined };
+export default { SmileOutlined, CrownOutlined };

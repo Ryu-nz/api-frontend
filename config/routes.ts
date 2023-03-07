@@ -19,12 +19,12 @@ export default [
     layout: false,
     routes: [
       {
-        name: 'login',
+        name: '登录',
         path: '/user/login',
         component: './User/Login',
       },
       {
-        name: 'login',
+        name: '注册',
         path: '/user/register',
         component: './User/Register',
       },
@@ -38,7 +38,7 @@ export default [
     routes: [
       {
         name: '接口管理',
-        icon: 'table',
+        icon: '接口展示',
         path: '/admin/interface_info',
         component: './Admin/InterfaceInfo',
       },
