@@ -1,5 +1,4 @@
-﻿import type { RequestOptions } from '@@/plugin-request/request';
-import type { RequestConfig } from '@umijs/max';
+﻿import type { RequestConfig } from '@umijs/max';
 
 
 // 错误处理方案： 错误类型
@@ -27,13 +26,13 @@ export const requestConfig: RequestConfig = {
   baseURL: API_URL,
   withCredentials: true,
   // 请求拦截器
-  requestInterceptors: [
-    (config: RequestOptions) => {
-      // 拦截请求配置，进行个性化处理。
-      const url = config?.url?.concat('?token = 123');
-      return { ...config, url };
-    },
-  ],
+  // requestInterceptors: [
+  //   (config: RequestOptions) => {
+  //     // 拦截请求配置，进行个性化处理。
+  //     const url = config?.url?.concat('?token = 123');
+  //     return { ...config, url };
+  //   },
+  // ],
 
   // 响应拦截器
   responseInterceptors: [

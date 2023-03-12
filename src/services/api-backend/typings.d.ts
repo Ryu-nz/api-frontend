@@ -83,12 +83,6 @@ declare namespace API {
     message?: string;
   };
 
-  type BaseResponseUser = {
-    code?: number;
-    data?: User;
-    message?: string;
-  };
-
   type BaseResponseUserInterfaceInfo = {
     code?: number;
     data?: UserInterfaceInfo;
@@ -194,6 +188,13 @@ declare namespace API {
     updateTime?: string;
     url?: string;
     userId?: number;
+  };
+
+  type invokeInterfaceByGetUsingGETParams = {
+    /** id */
+    id: number;
+    /** requestParams */
+    requestParams?: string;
   };
 
   type listInterfaceInfoByPageUsingGETParams = {
@@ -503,21 +504,6 @@ declare namespace API {
     place?: string;
     reviewMessage?: string;
     reviewStatus?: number;
-  };
-
-  type User = {
-    accessKey?: string;
-    createTime?: string;
-    gender?: number;
-    id?: number;
-    isDelete?: number;
-    secretKey?: string;
-    updateTime?: string;
-    userAccount?: string;
-    userAvatar?: string;
-    userName?: string;
-    userPassword?: string;
-    userRole?: string;
   };
 
   type UserAddRequest = {
